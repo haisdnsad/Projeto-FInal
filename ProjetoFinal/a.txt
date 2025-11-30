@@ -1,3 +1,0 @@
-    <figcaption>Evento 2025: Foto tirada do evento realizado em 2025 na fenacefe, reunindo diversos cosplays e
-                famosos, para exposicao dos novos animes prevcistos e games</figcaption>
-            <time datetime="2025-11-21">21 de novembro de 2025</time>
