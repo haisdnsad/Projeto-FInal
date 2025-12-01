@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produtos.css">
+    <title>Loja</title>
+</head>
+
+<body>
+    <header>
+        <div class="menu-btn" id="menuBtn">☰</div>
+        <nav id="menu">
+            <a href="index.html">Empresa</a>
+            <a href="#">Eventos</a>
+            <a href="Cosplay.html">Cosplay</a>
+            <a href="#">Animes/Games</a>
+            <a href="#">Mangas</a>
+            <a href="#">Comunidade</a>
+            <a href="#">Loja</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Produtos Oficiais</h1>
+        <section id="produtos">
+            <div class="produto">
+                <img src="imagens3/bonec.png" alt="Foto do produto">
+                <div>
+                    <strong>Boneca Cyber Crew</strong>
+                    <a href="#">Comprar</a>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens3/bag.png" alt="Foto do produto">
+                <div>
+                    <strong>Ecobag Cyber Crew</strong>
+                    <a href="#">Comprar</a>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens3/moletom.png" alt="Foto do produto">
+                <div>
+                    <strong>Moletom Cyber Crew</strong>
+                    <a href="#">Comprar</a>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens3/blusa.png" alt="Foto do produto">
+                <div>
+                    <strong>Camisa Cyber Crew</strong>
+                    <a href="#">Comprar</a>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens3/muie.png" alt="Foto do produto">
+                <div>
+                    <strong>Cosplay Cyber Crew</strong>
+                    <a href="#">Comprar</a>
+                </div>
+            </div>
+            <div class="produto">
+                <img src="imagens3/crianca.png" alt="Foto do produto">
+                <div>
+                    <strong>Cosplay Kids Cyber Crew</strong>
+                    <a href="#">Comprar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const btn = document.getElementById("menuBtn");
+        const menu = document.getElementById("menu");
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("ativo");
+        });
+    </script>
+</body>
+
+</html>

@@ -19,15 +19,17 @@
 * {
     margin: 0;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 h1 {
     font-family: "Rubik Bubbles", system-ui;
 }
 
-h1, h2, h3, h4, h5, h6, p, strong, a{
+h1, h2, h3, h4, h5, h6, p, strong, a {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
 }
+
 a {
     font-family: "Rammetto One", sans-serif;
 }
@@ -90,9 +92,17 @@ header nav a {
     font-family: "Rammetto One", sans-serif;
     color: #BAE4FF;
     font-size: clamp(1em, 1.3vw, 3rem);
+    box-shadow: 0px 4px 0 #7EAEBE;
+    transition: 0.2s;
 }
 
-header div {
+header nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 0 #7EAEBE;
+    transition: 0.2s;
+}
+
+header .topo {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -100,11 +110,11 @@ header div {
     width: 100%;
 }
 
-header div img {
+header .topo img {
     width: 45%;
 }
 
-header div h1 {
+header .topo h1 {
     font-size: 15vw;
     color: #AEE1E4;
 }
@@ -122,19 +132,21 @@ main #Slide {
 }
 
 main #Slide img {
-     width: 100%;
+    width: 100%;
     height: 100%;
     flex-shrink: 0;
     border-radius: 40px;
-    animation: slide 18s infinite alternate ;
+    animation: slide 18s infinite alternate;
     animation-timing-function: steps(6);
 }
+
 @keyframes slide {
     0% {
         transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-600%); 
+        transform: translateX(-600%);
     }
 }
 
@@ -159,7 +171,7 @@ main #Welcome>p {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.178);
 }
 
-#Sede > .conteudo {
+#Sede>.conteudo {
     display: flex;
     flex-flow: row nowrap;
     gap: 10px;
@@ -198,14 +210,14 @@ main #Welcome>p {
     width: 40%;
     background-color: #AEE1E4;
     border-radius: 15px;
-    box-shadow: 0 0  3px rgba(0, 0, 0, 0.178);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.178);
 }
 
-#Nos > div {
+#Nos>div {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    
+
 }
 
 #Nos figure {
@@ -249,62 +261,62 @@ main #Welcome>p {
 
 .menu-btn {
     display: none;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 10vw;
-    cursor: pointer;
-    z-index: 999;
-    color: black;
 }
 
 @media (max-width: 994px) {
-   
-    header {
-        position: relative;
-    }
-     .menu-btn {
+    .menu-btn {
+        font-size: 7vw;
+        cursor: pointer;
+        z-index: 999;
         display: block;
         position: fixed;
         top: 5px;
         left: 10px;
+        user-select: none;
+        padding: 10px;
+        backdrop-filter: blur(2px);
+        border-radius: 20px;
     }
 
-    header nav {
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        background-color: #BAE4FF;
-        width: 80%;
-        padding: 20px;
-        border-radius: 25px;
-        right: 10px;
+    #menu {
         position: fixed;
-        top: 15px;
-        z-index: 999;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.178);
-    }
-
-    header nav.ativo {
+        top: -20px;
+        left: -110%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(166, 217, 231, 0.97);
         display: flex;
+        flex-flow: column nowrap;
+        gap: 25px;
+        padding: 100px 20px;
+        transition: 0.3s;
     }
 
-    header nav a {
-        font-size: 4vw;
+    #menu a {
+        text-decoration: none;
+        font-size: 5vw;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: 2px 2px #7CAEC3, -0px -0px 4px black;
         text-align: center;
     }
 
-    header div {
+    #menu.ativo {
+        left: -3%;
+        z-index: 900;
+    }
+
+    header .topo {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
 
-    header div img {
+    header .topo img {
         width: 55%;
     }
 
-    header div h1 {
+    header .topo h1 {
         font-size: 20vw;
         text-align: center;
     }
@@ -328,11 +340,11 @@ main #Welcome>p {
         padding: 20px;
     }
 
-    main #Welcome > p {
+    main #Welcome>p {
         text-align: center;
     }
 
-    #Sede > .conteudo {
+    #Sede>.conteudo {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -350,7 +362,7 @@ main #Welcome>p {
         margin-top: 30px;
     }
 
-    #Nos > div {
+    #Nos>div {
         flex-direction: column;
         gap: 25px;
         align-items: center;
