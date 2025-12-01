@@ -3,10 +3,6 @@
 @font-face {
     font-family: "Rammetto One";
     src: url("fonts/Rammetto_One/RammettoOne-Regular.ttf") format('truetype');
-    /*
-        -opentype (otf)
-        - truetype (ttf)
-    */
 }
 
 @font-face {
